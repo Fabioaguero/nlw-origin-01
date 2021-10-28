@@ -1,0 +1,166 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point a {
+    color: var(--title-color);
+    font-size: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point a span {
+    margin-right: 1rem;
+    background-image: url(../assets/arrow-left.svg);
+
+    display: flex;
+
+    width: 20px;
+    height: 22px;
+}
+
+form {
+    background-color: white;
+
+    margin: 5rem auto;
+    padding: 4rem;
+
+    border-radius: 8px;
+
+    max-width: 730px;
+}
+
+form h1 {
+    font-size: 2.25rem;
+}
+
+form fieldset {
+    margin-top: 4rem;
+
+    border: 0;
+}
+
+form legend {
+    margin-bottom: 3rem;
+}
+
+form legend h2 {
+    font-size: 1.5rem;
+}
+
+form .field-group {
+    display: flex;
+}
+
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1.5rem;
+}
+
+form input,
+form select {
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+
+    border-radius: .5rem;
+}
+
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: .875rem;
+    margin-bottom: .5rem;
+}
+
+form .field-group .field + .field {
+    margin-left: 1.3rem;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: .5rem;
+
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 1rem;
+
+    border: .5px solid #2fb856;
+
+    margin-top: 2.5rem;
+
+    transition: background-color 400ms;
+}
+
+form button:hover {
+    background-color: #2fb86e
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.items-grid li {
+    background-color: #f5f5f5;
+    list-style: none;
+
+    border: .125rem solid #f5f5f0;
+    border-radius: .5rem;
+
+    height: 180px;
+
+    padding: 2rem 1.5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.items-grid li span {
+    margin-top: .75rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color)
+}
+
+.items-grid li.selected {
+    background-color: #e1faec;
+    border: .125rem solid #34cb79; 
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none;
+}
+

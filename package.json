@@ -1,0 +1,28 @@
+{
+  "name": "nlw-origin-01",
+  "version": "1.0.0",
+  "description": "aula 01 = ok\r aula 02 = ok\r aula 03 = 1:00:00",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabioaguero/nlw-origin-01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fabioaguero/nlw-origin-01/issues"
+  },
+  "homepage": "https://github.com/Fabioaguero/nlw-origin-01#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

@@ -14,6 +14,10 @@
     transition: 500ms;
 }
 
+#modal.hide {
+    display: none;
+}
+
 .content-modal {
     width: 520px;
     
@@ -82,8 +86,13 @@
     width: 72px;
     height: 72px;
 
-    border-radius: 8px;
+    border: 0;
+    border-radius: 0 8px 8px 0;
 
     background-color: var(--primary-color);
+}
+
+#modal form button:hover {
+    background-color: #2fb85e;
 }
 

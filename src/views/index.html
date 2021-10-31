@@ -25,7 +25,7 @@
 
             <header>
                <img src="/assets/logo.svg" alt="Logo da marca Ecoleta">
-               <a href="https://google.com.br">
+               <a href="/create-point">
                 <span></span>
                 Cadastre um ponto de coleta</a>
             </header>
@@ -45,16 +45,16 @@
         </div>
     </div>
 
-    <div id="modal">
+    <div id="modal" class="hide">
         <div class="content-modal">
             <div class="header">
                 <h1>Pontos de coleta</h1>
-                <a href="">Fechar</a>
+                <a href="#">Fechar</a>
             </div>
-            <form action="">
+            <form action="/serach-results.html">
                 <label for="search">Cidade</label>
                 <div class="search field">
-                    <input type="text" name="search">
+                    <input type="text" name="search" placeholder="Pesquise por cidade">
                     <button>
                         <img src="/assets/search.svg" alt="Botao de busca">
                     </button>
@@ -63,11 +63,6 @@
         </div>
     </div>
 
-    
-
-    
-
-    
-    
+     <script src="/scripts/indexModal.js"></script>
 </body>
 </html>

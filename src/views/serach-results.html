@@ -1,72 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layout.html" %}
 
-    <title>Criar um ponto de coleta</title>
+{% set pageId = "page-search-results" %}
 
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/search-results.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    
+{% block title %}
+<title>Criar um ponto de coleta</title>
+{% endblock title %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    
-    
-</head>
-<body>
+{% block styles %}
+<link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
 
-    <div id="page-search-results">
-        
-           <header>
-               <img src="/assets/logo.svg" alt="Logo da marca Ecoleta">
-               <a href="/">
-                <span></span>
-                Voltar para home</a>
-            </header>
 
-            <main>
+{% block content %}
 
-              <h4>
-                <strong>2 pontos</strong>encontratos
-              </h4>
+{% include "partials/page-header.html" %}
 
-              <div class="cards">
-                <div class="card">
-                  <img src="https://cdn.pixabay.com/photo/2018/01/21/17/14/house-3097046__340.jpg" alt="coletoria">
-                  <h1>Colectoria</h1>
-                  <h3>Resíduos Eeletrônicos, Lâmpadas</h3>
-                  <p>
-                    Rio do Sul, Santa Catarina <br/>
-                    Guilherme Gemballa, Jardim América <br/>
-                    Número 260
-                  </p>
-                </div>
+<main>
 
-                <div class="card">
-                  <img src="https://cdn.pixabay.com/photo/2018/10/13/12/47/recycling-3744181__340.jpg" alt="Papersider">
-                  <h1>Colectoria</h1>
-                  <h3>Papéis e Papelões</h3>
-                  <p>
-                    Rio do Sul, Santa Catarina <br/>
-                    Guilherme Gemballa, Jardim América <br/>
-                    Número 260
-                  </p>
-                </div>
-              </div>
-            </main>
-    
+  <h4>
+    <strong>2 pontos</strong>encontratos
+  </h4>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2018/01/21/17/14/house-3097046__340.jpg" alt="coletoria">
+      <h1>Colectoria</h1>
+      <h3>Resíduos Eeletrônicos, Lâmpadas</h3>
+      <p>
+        Rio do Sul, Santa Catarina <br />
+        Guilherme Gemballa, Jardim América <br />
+        Número 260
+      </p>
     </div>
 
-    
-
-    
-
-    
-    <script src=""></script>
-</body>
-</html>
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2018/10/13/12/47/recycling-3744181__340.jpg" alt="Papersider">
+      <h1>Colectoria</h1>
+      <h3>Papéis e Papelões</h3>
+      <p>
+        Rio do Sul, Santa Catarina <br />
+        Guilherme Gemballa, Jardim América <br />
+        Número 260
+      </p>
+    </div>
+  </div>
+</main>
+{% endblock content %}

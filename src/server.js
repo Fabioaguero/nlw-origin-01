@@ -13,13 +13,13 @@ const nunjucks = require("nunjucks")
 
 //config rotas da aplicação - pag. inicial e rotas
 server.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html")
+  return res.render("index.html")
 })
 server.get("/create-point", (req, res) => {
-  res.sendFile(__dirname + "/views/create-point.html")
+  return res.render("create-point.html")
 })
-server.get("/serach-results", (req, res) => {
-  res.sendFile(__dirname + "/views/serach-results.html")
+server.get("/serach", (req, res) => {
+  return res.render("serach-results.html")
 })
 
 // ligar o servidor

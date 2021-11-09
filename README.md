@@ -3,6 +3,10 @@
 aula 01 = ok
 aula 02 = ok
 aula 03 = ok
+<<<<<<< Updated upstream
 aula 04 = ok
 aula 05 = 00:49
 
+=======
+aula 04 = 1:25:00
+>>>>>>> Stashed changes

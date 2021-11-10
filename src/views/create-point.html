@@ -8,6 +8,7 @@
 
 {% block styles %}
 <link rel="stylesheet" href="/styles/create-point.css">
+<link rel="stylesheet" href="/styles/modal.css">
 {% endblock styles %}
 
 
@@ -15,7 +16,7 @@
 
 {% include "partials/page-header.html" %}
 
-<form action="">
+<form action="/savepoint" method="post">
     <h1>Cadrasto do ponto de coleta</h1>
 
     <fieldset>
@@ -50,7 +51,7 @@
         <div class="field-group">
 
             <div class="field">
-                <label for="uf">Estado</label>
+                <label for="state">Estado</label>
                 <select name="uf" required>
                     <option value="">Selecione o Estado</option>
                 </select>
@@ -75,29 +76,29 @@
         </legend>
 
         <div class="items-grid">
-            <li data-id="1">
+            <li data-id="Lâmpadas">
                 <img src="/assets/lampadas.svg" alt="Lâmpadas">
                 <span>Lâmpadas</span>
             </li>
-            <li data-id="2">
+            <li data-id="Pilhas e Baterias">
                 <img src="/assets/baterias.svg" alt="Pilhas e Baterias">
                 <span>Pilhas e Baterias</span>
             </li>
-            <li data-id="3">
+            <li data-id="Papéis e papelões">
                 <img src="/assets/papeis-papelao.svg" alt="Papéis e papelões">
                 <span>Papéis e papelões</span>
             </li>
-            <li data-id="4">
+            <li data-id="Resíduoes Eletrônicos">
                 <img src="/assets/eletronicos.svg" alt="Resíduoes Eletrônicos">
                 <span>Resíduoes Eletrônicos</span>
             </li>
-            <li data-id="5">
+            <li data-id="Resíduos Orgânicos">
                 <img src="/assets/organicos.svg" alt="Resíduos Orgânicos">
                 <span>Resíduos Orgânicos</span>
             </li>
-            <li data-id="6">
+            <li data-id="Óleos de Cozinha">
                 <img src="/assets/oleo.svg" alt="òleos de Cozinha">
-                <span>òleos de Cozinha</span>
+                <span>Óleos de Cozinha</span>
             </li>
         </div>
 
@@ -108,6 +109,18 @@
 </form>
 
 {% endblock content %}
+
+{% block modal %}
+    {% if saved %} 
+      {% include "partials/modal.html" %}
+    {% endif %}
+{% endblock modal %}
+
+
+
+
+
+
 
 {% block scripts %}
 <script src="/scripts/creat-point.js"></script>

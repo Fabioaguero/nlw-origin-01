@@ -17,32 +17,33 @@
 
 <main>
 
+  {% if total > 0 %}
+
   <h4>
-    <strong>2 pontos</strong>encontratos
+    <strong>{{ total }} pontos</strong>encontratos
   </h4>
 
   <div class="cards">
+
+    {% for place in places %}
     <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2018/01/21/17/14/house-3097046__340.jpg" alt="coletoria">
-      <h1>Colectoria</h1>
-      <h3>Resíduos Eeletrônicos, Lâmpadas</h3>
+      <img src="{{ place.image }}" alt="{{ place.name }}">
+      <h1>{{ place.name }}</h1>
+      <h3>{{ place.items }}</h3>
       <p>
-        Rio do Sul, Santa Catarina <br />
-        Guilherme Gemballa, Jardim América <br />
-        Número 260
+        {{ place.city }}, {{ place.state }} <br />
+        {{ place.address }} <br />
+        {{ place.address2 }}
       </p>
     </div>
 
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2018/10/13/12/47/recycling-3744181__340.jpg" alt="Papersider">
-      <h1>Colectoria</h1>
-      <h3>Papéis e Papelões</h3>
-      <p>
-        Rio do Sul, Santa Catarina <br />
-        Guilherme Gemballa, Jardim América <br />
-        Número 260
-      </p>
-    </div>
-  </div>
-</main>
+    {% endfor %}
+
+    {%else%}
+
+    <h4> <strong> Itens não encontrados ou não cadastrado </strong></h4>
+
+    {% endif %}
+   
+    
 {% endblock content %}
